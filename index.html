@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AYO Chill</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+  <!-- CSS for animations and styling -->
+  <style>
+    /* Basic reset */
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(120deg, #1e3c72, #2a5298);
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Animated background shapes */
+    .blob {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+      filter: blur(80px);
+    }
+
+    .blob:nth-child(1) { top: -50px; left: -50px; animation-delay: 0s; }
+    .blob:nth-child(2) { bottom: -100px; right: -100px; animation-delay: 3s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(50px) translateX(50px); }
+    }
+
+    /* Main title animation */
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      animation: fadeInZoom 2s ease forwards;
+      margin-bottom: 40px;
+    }
+
+    @keyframes fadeInZoom {
+      0% { opacity: 0; transform: scale(0.5); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* YouTube button */
+    .youtube-btn {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: #fff;
+      background: #ff0000;
+      padding: 15px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 20px rgba(255,0,0,0.5);
+    }
+
+    .youtube-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 40px rgba(255,0,0,0.8);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background blobs -->
+  <div class="blob"></div>
+  <div class="blob"></div>
+
+  <!-- Main title -->
+  <h1>AYO Chill</h1>
+
+  <!-- YouTube link as a button -->
+  <a class="youtube-btn" href="https://youtu.be/QDia3e12czc?si=IPScgdnjpuNKOBWa" target="_blank">
+    AYO Chill!!
+  </a>
+
+</body>
+</html>
